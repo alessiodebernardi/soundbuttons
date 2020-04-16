@@ -1,0 +1,73 @@
+body {
+    background: #eee9db;
+}
+
+h3 {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 50px;
+}
+
+.hidden {
+   display: none;
+}
+
+.options {
+   padding: 5px 0;
+   margin: 10px 0;
+}
+
+.buttons {
+   margin-bottom: 50px;
+}
+.button {
+   background: #69ba5e;
+   text-align: center;
+   border-radius: 5px;
+   color: #ffffff;
+   cursor: pointer;
+   font-family: 'Varela Round', sans-serif;
+   vertical-align: middle;
+
+   -webkit-touch-callout: none; /* iOS Safari */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+   user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+.button span {
+   pointer-events: none;
+   -webkit-touch-callout: none; /* iOS Safari */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+   user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+.button:hover {
+   background: #69ba5ed4;
+}
+
+@media only screen and (max-width: 600px) {
+   .button {
+      padding: 10px 20px;
+      height: 70px;
+      line-height: 0.8;
+      margin: 5px 0;
+   }
+   .button .name {
+      font-size: 8px;
+   }
+}
+
+@media only screen and (min-width: 601px) {
+   .button {
+      padding: 20px 40px;
+      height: 120px;
+      line-height: 1;
+      margin: 20px 0;
+   }
+   .button .name {
+      font-size: 20px;
+   }
+}

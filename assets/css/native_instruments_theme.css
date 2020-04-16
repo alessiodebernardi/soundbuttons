@@ -1,0 +1,237 @@
+/**
+*  V 1.2.6
+**/
+#madeby {
+   position: absolute;
+   right: 5px;
+   margin-bottom: 5px;
+   color: #f2f1f2;
+   font-size: 8px;
+   text-transform: uppercase;
+}
+#madeby .fa-heart {
+   color: red;
+}
+
+body.nativeinstrumentstheme {
+    background-color: #232323;
+}
+
+.nativeinstrumentstheme h3 {
+    color: #f2f1f2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+.nativeinstrumentstheme h3::before {
+   content: '\f192';
+   font-family: FontAwesome;
+   margin-right: 10px;
+}
+
+.nativeinstrumentstheme .options {
+   border-bottom: 5px dotted #715358;
+}
+.nativeinstrumentstheme .display {
+   position: relative;
+   border: 10px solid #121212;
+   background-color: #5e5e5e;
+   border-radius: 5px;
+   margin-bottom: 10px;
+   color: #d0d0d0;
+   padding: 5px 10px;
+   text-transform: uppercase;
+   font-weight: bold;
+   letter-spacing: 1px;
+   font-size: 8px;
+   box-shadow: inset 0px 0px 6px 2px #222222;
+   pointer-events: none;
+   -webkit-touch-callout: none; /* iOS Safari */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+   user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+.nativeinstrumentstheme .display div {
+   display: inline-block;
+   margin-right: 10px;
+}
+.nativeinstrumentstheme .display hr {
+   margin: 10px 0 5px 0;
+   border-color: #121212;
+}
+.nativeinstrumentstheme .display #oscilloscope{
+   width: 100%;
+   min-height: 15px;
+}
+.nativeinstrumentstheme .display.noadvmode::after {
+   content: 'Not available without advanced mode';
+   position: absolute;
+   right: 10px;
+   bottom: 10px;
+}
+.nativeinstrumentstheme .display.noadvmode #oscilloscope {
+   visibility: hidden;
+}
+.nativeinstrumentstheme .options .opt-button {
+   background-color: #3a393a;
+   border-bottom: 4px solid #272727;
+   position: relative;
+   box-shadow: 0px 8px 3px #080808;
+   height: 60px;
+   border-radius: 8px;
+   margin: 10px 0 14px;
+}
+.nativeinstrumentstheme .options .opt-button.disabled {
+   pointer-events: none;
+   background-color: #2b2a2b;
+   border-bottom: 4px solid #191818;
+}
+.nativeinstrumentstheme .options .opt-button.disabled .opt-ico,
+.nativeinstrumentstheme .options .opt-button.disabled .name {
+   color: #504f50;
+}
+
+.nativeinstrumentstheme .options .opt-button .name {
+   position: absolute;
+   left: 10px;
+   top: 8px;
+   text-align: left;
+   color: #b3b3b3;
+   font-weight: 600;
+   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+   text-transform: uppercase;
+   font-size: 15px;
+   line-height: 1;
+   max-width: 75%;
+   text-overflow: ellipsis;
+   overflow: hidden;
+}
+.nativeinstrumentstheme .options .opt-button .opt-ico {
+   font-size: 8px;
+   position: absolute;
+   bottom: 7px;
+   right: 7px;
+   letter-spacing: 1px;
+   color: #b3b3b3;
+   transition: 0.1s color;
+}
+.nativeinstrumentstheme .options .opt-button.active {
+   border-bottom-width: 2px !important;
+   top: 2px;
+   box-shadow: 0px 4px 3px #080808;
+   height: 58px !important;
+   margin: 10px 0 16px;
+   transition: 0.1s color;
+}
+.nativeinstrumentstheme .options .opt-button.active .opt-ico,
+.nativeinstrumentstheme .options .opt-button.lighted .opt-ico {
+   color: #f04e53;
+   transition: 0.1s color;
+}
+
+.nativeinstrumentstheme .button.sound-button {
+    background-color: #3a393a;
+    border-bottom: 4px solid #272727;
+    position: relative;
+    box-shadow: 0px 8px 3px #080808;
+    opacity: 0.8;
+    transition: 0.1s opacity;
+    height: 120px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.nativeinstrumentstheme .button.sound-button .name {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    text-align: left;
+    color: #2f2f2f;
+    font-weight: 600;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 1;
+    max-width: 75%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.nativeinstrumentstheme .button.sound-button .keyboardkey {
+    position: absolute;
+    right: 4px;
+    bottom: 3px;
+    color: #2f2f2f;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 10px;
+    width: 17px;
+    height: 17px;
+    padding: 4px;
+}
+.nativeinstrumentstheme .button.sound-button.active {
+    opacity: 1;
+    border-bottom-width: 2px !important;
+    top: 2px;
+    box-shadow: 0px 4px 3px #080808;
+    transition: 0.1s opacity;
+    height: 118px;
+    margin-bottom: 12px;
+}
+.nativeinstrumentstheme .button.sound-button.lighted {
+    opacity: 1;
+}
+
+/*BTN colors*/
+.nativeinstrumentstheme .button.sound-button.acqua {
+    background-image: -webkit-radial-gradient(circle, #00c0b2, #09e4d5);
+    border-bottom-color: #077971;
+}
+.nativeinstrumentstheme .button.sound-button.yellow {
+    background-image: -webkit-radial-gradient(circle, #ffc865, #ffb126);
+    border-bottom-color: #946c26;
+}
+.nativeinstrumentstheme .button.sound-button.red {
+    background-image: -webkit-radial-gradient(circle, #ff6a73, #ff303d);
+    border-bottom-color: #a91922;
+}
+.nativeinstrumentstheme .button.sound-button.lightblue {
+    background-image: -webkit-radial-gradient(circle, #59d2ec, #2fadc9);
+    border-bottom-color: #1e6575;
+}
+.nativeinstrumentstheme .button.sound-button.pink {
+    background-image: -webkit-radial-gradient(circle, #de92e2, #c571ca);
+    border-bottom-color: #835586;
+}
+.nativeinstrumentstheme .button.sound-button.green {
+   background-image: -webkit-radial-gradient(circle, #b1ff6a, #2cce2a);
+   border-bottom-color: #1a7519;
+}
+.nativeinstrumentstheme .button.sound-button.purple {
+   background-image: -webkit-radial-gradient(circle, #8d6ef9 , #7157cc);
+   border-bottom-color: #473682;
+}
+.nativeinstrumentstheme .button.sound-button.orange{
+   background-image: -webkit-radial-gradient(circle, #ff993c, #ff8100);
+   border-bottom-color: #9e5000;
+}
+
+@media only screen and (max-width: 600px) {
+   .nativeinstrumentstheme .options .button .name,
+   .nativeinstrumentstheme .button.sound-button .name {
+      font-size: 7px !important;
+   }
+   .nativeinstrumentstheme h3 {
+      font-size: 32px;
+   }
+}
+
+@media only screen and (max-width: 425px) {
+   .nativeinstrumentstheme h3 {
+      font-size: 28px;
+      margin: 8px 0;
+   }
+   .nativeinstrumentstheme .display {
+      font-size: 6px;
+   }
+}

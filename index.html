@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="it">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Sound Buttons</title>
+      <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="./assets/lib/font-awesome-4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="./assets/css/style.css">
+      <link rel="stylesheet" href="./assets/css/native_instruments_theme.css?v=1.2.6">
+   </head>
+   <body class="nativeinstrumentstheme">
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+               <h3>SOUND BUTTONS</h3>
+            </div>
+         </div>
+         <div class="options">
+            <div class="row">
+               <div class="col-12">
+                  <div class="display">
+                     <div>Rate: <span id="ratevalue"></span></div>
+                     <div>Pitch: <span id="pitchvalue"></span></div>
+                     <div>Pitch LI: <span id="pitchlivalue"></span></div>
+                     <div>Pitch LD: <span id="pitchldvalue"></span></div>
+                     <div>Delay: <span id="delayvalue"></span></div>
+                     <div>Distortion: <span id="distortionvalue"></span></div>
+                     <div>Advanced Mode: <span id="advancedmodevalue"></span></div>
+                     <hr/>
+                     <canvas id="oscilloscope" width="4000" height="60"></canvas>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-2 col-3">
+                  <div class="opt-button button" data-option-action="ratedown">
+                     <span class="name">Rate down</span>
+                     <i class="opt-ico fa fa-backward" aria-hidden="true"></i>
+                  </div>
+               </div>
+               <div class="col-md-2 col-3">
+                  <div class="opt-button button" data-option-action="rateup">
+                     <span class="name">Rate up</span>
+                     <i class="opt-ico fa fa-forward" aria-hidden="true"></i>
+                  </div>
+               </div>
+               <div class="col-md-2 col-3">
+                  <div class="opt-button button" data-option-action="pitchdown">
+                     <span class="name">Pitch down</span>
+                     <i class="opt-ico fa fa-hand-o-down" aria-hidden="true"></i>
+                  </div>
+               </div>
+               <div class="col-md-2 col-3">
+                  <div class="opt-button button" data-option-action="pitchup">
+                     <span class="name">Pitch up</span>
+                     <i class="opt-ico fa fa-hand-o-up" aria-hidden="true"></i>
+                  </div>
+               </div>
+               <div class="col-md-2 col-3">
+                  <div class="opt-button button" data-option-action="pitchei">
+                     <span class="name">Pitch EI</span>
+                     <i class="opt-ico fa fa-rocket" aria-hidden="true"></i>
+                  </div>
+               </div>
+               <div class="col-md-2 col-3">
+                  <div class="opt-button button" data-option-action="pitched">
+                     <span class="name">Pitch ED</span>
+                     <i class="opt-ico fa fa-space-shuttle" aria-hidden="true"></i>
+                  </div>
+               </div>
+               <div class="col-md-2 col-3">
+                  <div class="opt-button button" data-option-action="delaydown">
+                     <span class="name">Delay down</span>
+                     <i class="opt-ico fa fa-clock-o" aria-hidden="true"></i>
+                  </div>
+               </div>
+               <div class="col-md-2 col-3">
+                  <div class="opt-button button" data-option-action="delayup">
+                     <span class="name">Delay up</span>
+                     <i class="opt-ico fa fa-clock-o" aria-hidden="true"></i>
+                  </div>
+               </div>
+               <div class="col-md-2 col-3">
+                  <div class="opt-button button" data-option-action="distortion">
+                     <span class="name">Distortion</span>
+                     <i class="opt-ico fa fa-bomb" aria-hidden="true"></i>
+                  </div>
+               </div>
+               <div class="col-md-2 col-3">
+                  <div class="opt-button button" data-option-action="stopaudio">
+                     <span class="name">Stop</span>
+                     <i class="opt-ico fa fa-stop" aria-hidden="true"></i>
+                  </div>
+               </div>
+               <div class="col-md-2 col-3">
+                  <div class="opt-button button" data-option-action="reset">
+                     <span class="name">Reset</span>
+                     <i class="opt-ico fa fa-trash" aria-hidden="true"></i>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row buttons">
+            <div class="col-4 col-md-6 col-lg-3 to-copy d-none">
+               <div class="button">
+                  <span class="name"></span>
+                  <span class="badge badge-secondary keyboardkey"></span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="madeby">
+         MADE WITH <i class="fa fa-heart" aria-hidden="true"></i> BY Alessio Debernardi & Matteo Zoccano
+      </div>
+      <script>
+         var buttons = [
+            // insert here buttons details
+            {
+               "name" : "Siren", // Button title
+               "trackid" : "siren", // Button id (must be unique)
+               "path": "./sounds/siren.mp3", // audio path
+               "from" : 0, // audio start
+               "offset" : 10, // audio offset
+               "keybinding" : "48", // keybinding
+               "classes": "acqua" // style class (aqua|yellow|red|lightblue|pink|green|purple|orange)
+            },
+         ];
+      </script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="./assets/js/modules/audioprocessor.module.js"></script>
+      <script src="./assets/js/modules/soundbuttons.module.js"></script>
+      <script src="./assets/js/scripts.js"></script>
+   </body>
+</html>
